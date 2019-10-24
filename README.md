@@ -1,6 +1,6 @@
 # EmployeeManagement-Angular8
 
-Clone/Download EmpMgmt-NodeAPI Repo and run .
+Clone/Download NodeJS-JSON-API-server from my github repo-list and run.
 
 
 after that do an npm install 
