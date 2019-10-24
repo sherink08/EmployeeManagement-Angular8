@@ -1,4 +1,4 @@
-# EmpMgmnt
+# EmployeeManagement-Angular8
 
 Clone/Download EmpMgmt-NodeAPI Repo and run .
 
