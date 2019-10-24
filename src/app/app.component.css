@@ -1,0 +1,35 @@
+nav{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: darkblue;
+    padding: 0 16px;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul{
+    display: flex;
+    color: #fff;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 5px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    height: max-content;
+    border-radius: 3px;
+}
+
+nav ul li:hover{
+    background: #4444c3;
+}
+
+nav ul li.active{
+    background: #4444c3;
+}
+
+.container{
+    padding: 60px 0px 30px 0px;
+}

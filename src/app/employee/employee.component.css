@@ -1,0 +1,180 @@
+
+.header{
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 10px 33px;
+    background-color: #e4edff;
+}
+.topbar{
+    display: flex;
+    align-items: center;
+}
+.topbar h2{
+    margin-right: 30px;
+}
+.topbar label{
+    color: red;
+}
+
+.panel{
+    display: flex;
+}
+.panel input{
+    width: 50%;
+    height: 30px;
+    margin-right: 1%;
+    font-size: 16px;
+    border: 0.5px solid #555;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.card-container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto;
+
+    justify-content: space-around;
+    height: 67vh;
+    overflow-y: scroll;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #555;
+    float: left;
+    border-radius: 5px;
+    margin-top: 10px;
+    min-width: 320px;
+    height: 100px;
+}
+
+.card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid;
+    max-width: 33%;
+    height: auto;
+    padding: 8px 15px;
+}
+
+.card div:last-child{
+    width: auto;
+}
+
+.card div:last-child i{
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
+.card div:last-child i:hover{
+    cursor: pointer;
+    color: lightseagreen;
+}
+
+.card div > *{
+    margin-top: 5px;
+}
+
+.card div > b:first-child, .card div > span:first-child, .card div > i:first-child{
+    margin-top: 0px;
+}
+
+.fa-save{
+    color: forestgreen;
+}
+.fa-ban{
+    color: darkred;
+}
+
+.card div input{
+    padding: 5px;
+}
+
+.editable{
+    border: 0.5px solid #888;
+    border-radius: 2px;
+}
+.noneditable{
+    border: none;
+    outline: none;
+}
+
+button{
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    height: -moz-max-content;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 0px;
+}
+button:hover{
+    opacity: 0.9;
+}
+
+.btn{
+    background-color: #4747e0;
+    color: #fff;
+    width: 9%;
+}
+
+.popup{
+    position: absolute;
+    z-index: 999;
+    width: 400px;
+    background-color: #eee;
+    border: 0.5px solid #888;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-align: -webkit-center;
+    padding: 30px 0px 30px 0px;
+    border-radius: 5px;
+    display: none;
+}
+.overlay{
+    position: fixed;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.9;
+    display: none;
+}
+.showpopup{
+    display: block;
+}
+.hidepopup{
+    display: none;
+}
+.popup div{
+    margin-top: 10px;
+}
+.popup div button:nth-child(1){
+    background-color: forestgreen;
+}
+.popup div button:nth-child(2){
+    background-color: crimson;
+    margin-left: 10px;
+}
+
+
+@media (max-width: 767.98px) {
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

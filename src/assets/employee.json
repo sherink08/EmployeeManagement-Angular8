@@ -1,0 +1,44 @@
+{
+  "candidates": [
+    {
+      "id": "1",
+      "name": "Lakita Marrero",
+      "company": "test company",
+      "email": "lakita_marrero@gmail.com",
+      "contact": "4455667788",
+      "desig": "Operations Manager"
+    },
+    {
+      "id": "2",
+      "name": "Tokyo a",
+      "company": "test company",
+      "email": "tokyo@gmail.com",
+      "contact": "4455667788",
+      "desig": "Marketing Manager"
+    },
+    {
+      "id": "3",
+      "name": "Belin b",
+      "company": "test company",
+      "email": "berlin@gmail.com",
+      "contact": "4455667788",
+      "desig": "Dev"
+    },
+    {
+      "id": "4",
+      "name": "Professor",
+      "company": "test company",
+      "email": "professor@gmail.com",
+      "contact": "4455667788",
+      "desig": "Operations Head"
+    },
+    {
+      "id": "5",
+      "name": "Riquel",
+      "company": "test company",
+      "email": "riquel@gmail.com",
+      "contact": "4455667788",
+      "desig": "IT"
+    }
+  ]
+}

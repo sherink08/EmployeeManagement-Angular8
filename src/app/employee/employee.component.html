@@ -1,0 +1,45 @@
+<div class="header">
+    <div class="topbar">
+        <h2>Employee</h2>
+        <label *ngIf="errorMessage">{{errorMessage}}</label>
+    </div>
+    <div class="panel">
+        <input type="text" (keydown)="filter()" [(ngModel)]="searchWord" placeholder="Search any keyword"/>
+        <button class="btn" (click)="addNew()">Add New</button>
+    </div>
+</div>
+
+<div class="card-container">
+    <div class="card" *ngFor="let candidate of candidates;  let in=index;">
+        
+        <img
+            width="40"
+            alt="Angular Logo"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+        />
+        <div>
+            <b><input type="text" placeholder="Name" [(ngModel)]="candidates[in].name" [class.editable]="candidate.editable" [class.noneditable]="!candidate.editable" /></b>
+            <i><input type="text" placeholder="Company" [(ngModel)]="candidates[in].company" [class.editable]="candidate.editable" [class.noneditable]="!candidate.editable"/></i>
+        </div>
+        <div>
+            <span><input type="text" placeholder="Email" [(ngModel)]="candidates[in].email" [class.editable]="candidate.editable" [class.noneditable]="!candidate.editable"/></span>
+            <span><input type="text" placeholder="Contact" [(ngModel)]="candidates[in].contact" [class.editable]="candidate.editable" [class.noneditable]="!candidate.editable"/></span>
+            <span><input type="text" placeholder="Designation" [(ngModel)]="candidates[in].desig" [class.editable]="candidate.editable" [class.noneditable]="!candidate.editable"/></span>
+        </div>
+        <div>
+            <i class="fa fa-pencil-square" title="" (click)="edit(candidate);" *ngIf="!candidate.editable"></i>
+            <i class="fa fa-ban" title="" (click)="cancel(candidate);" *ngIf="candidate.editable"></i>
+            <i class="fa fa-save" title="" (click)="update(candidate);" *ngIf="candidate.editable"></i>
+            <i class="fa fa-trash" title="Delete employee" (click)="deleteQuestion(candidate)" *ngIf="candidate.id!=0"></i>
+        </div>
+    </div>
+</div>
+
+<div class="popup" [class.showpopup]="popup" [class.hidepopup]="!popup">
+    <b>Do you realy want to delete?</b>
+    <div>
+        <button class="Yes" (click)="delete(true)" >Yes</button>
+        <button class="No" (click)="delete(false)"> No</button>
+    </div>
+</div>
+<div class="overlay" [class.showpopup]="popup" [class.hidepopup]="!popup"></div>
